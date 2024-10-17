@@ -53,7 +53,7 @@ def make_export():
     else:
         raise Exception(response.text)
 
-    path = f'{EXPORTS_FOLDER}/{generate_file_name("csv")}_export.txt'
+    path = f'{EXPORTS_FOLDER}/{generate_file_name("csv")}'
     fieldnames = ['_id', 'login', 'password', 'createdAt']
 
     if users and len(users) > 0 and isinstance(users, list):
