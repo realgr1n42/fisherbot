@@ -56,7 +56,7 @@ def make_export():
     path = f'{EXPORTS_FOLDER}/{generate_file_name("csv")}_export.txt'
     fieldnames = ['_id', 'login', 'password', 'createdAt']
 
-    if users and isinstance(users, list):
+    if users and users is not [] and isinstance(users, list):
         with open(path, mode='w', newline='', encoding='utf-8') as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
