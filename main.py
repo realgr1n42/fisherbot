@@ -62,6 +62,8 @@ def make_export():
             writer.writeheader()
             writer.writerows(users)
 
+    return path
+
 def delete_data():
     response = delete('credentials')
 
