@@ -41,7 +41,7 @@ def get(action: str):
 def delete(action: str):
     url = f"{ONLYFISH_API_URL}/{action}"
     print(f"url: {url}")
-    return requests.delete(url)
+    return requests.delete(url, verify=False)
 
 def make_export():
     response = get('credentials')
