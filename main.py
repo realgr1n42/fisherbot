@@ -36,7 +36,7 @@ def generate_file_name(extension='txt'):
 def get(action: str):
     url = f"{ONLYFISH_API_URL}/{action}"
     print(f"url: {url}")
-    return requests.get(url)
+    return requests.get(url, verify=False)
 
 def delete(action: str):
     url = f"{ONLYFISH_API_URL}/{action}"
